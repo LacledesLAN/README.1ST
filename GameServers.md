@@ -33,3 +33,4 @@ Base images on the left with derivative images to the right.
 * Content meant for `/app/bin/` (inside the image) are stored in `/dist/`.
   * Any Linux specific content is stored in `/dist.linux/`.
   * Any Windows specific content is stored in `/dist.windows/`.
+
