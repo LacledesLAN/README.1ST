@@ -3,6 +3,7 @@ Wherever feasible we build/deploy our game servers as [Docker](https://www.docke
 
 ### Image Catalogue
 Base images on the left with derivative images to the right.
+
 | 0 ►                                               | 1 ►                                                           | 2 ►                                                                        | 3                                                                             |
 |---------------------------------------------------|---------------------------------------------------------------|----------------------------------------------------------------------------|-------------------------------------------------------------------------------|
 | [ubuntu:latest](https://hub.docker.com/_/ubuntu/) | [gamesvr-srcds](https://github.com/LacledesLAN/gamesvr-srcds) | [-7daystodie](https://github.com/LacledesLAN/gamesvr-srcds-7daystodie)     | [-freeplay](https://github.com/LacledesLAN/gamesvr-srcds-7daystodie-freeplay) |
@@ -33,4 +34,3 @@ Base images on the left with derivative images to the right.
 * Content meant for `/app/bin/` (inside the image) are stored in `/dist/`.
   * Any Linux specific content is stored in `/dist.linux/`.
   * Any Windows specific content is stored in `/dist.windows/`.
-
