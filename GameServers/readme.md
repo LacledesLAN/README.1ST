@@ -1,4 +1,6 @@
-## Laclede's LAN Game Servers
+# Laclede's LAN Game Servers
+
+## Dockerized Game Servers
 Wherever feasible we build/deploy our game servers as [Docker](https://www.docker.com/) containers and use [Snippet-Generator](https://github.com/LacledesLAN/Snippet-Generator) to generate the launch strings.
 
 ### Image Catalogue
