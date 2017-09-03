@@ -11,31 +11,47 @@ We use [docker image "SteamCMD"](https://github.com/LacledesLAN/SteamCMD) to bui
 #### Game Servers
 Base images on the left with derivative images to the right.
 
-| 1 ►                                                                         | 2         |
-| --------------------------------------------------------------------------- | ------------- |
-| [gamesvr-7daystodie](https://github.com/LacledesLAN/gamesvr-7daystodie)     | [gamesvr-7daystodie-freeplay](https://github.com/LacledesLAN/gamesvr-7daystodie-freeplay) |
-| [gamesvr-blackmesa](https://github.com/LacledesLAN/gamesvr-blackmesa)       | [gamesvr-blackmesa-freeplay](https://github.com/LacledesLAN/gamesvr-blackmesa-freeplay)   |
-| [gamesvr-csgo](https://github.com/LacledesLAN/gamesvr-csgo)                 | [gamesvr-csgo-freeplay](https://github.com/LacledesLAN/gamesvr-csgo-freeplay)             |
-|                                                                             | [gamesvr-csgo-test](https://github.com/LacledesLAN/gamesvr-csgo-test)                     |
-|                                                                             | [gamesvr-csgo-tourney](https://github.com/LacledesLAN/gamesvr-csgo-tourney)               |
-| [gamesvr-cssource](https://github.com/LacledesLAN/gamesvr-cssource)         | [gamesvr-cssource-freeplay]()                                                             |
-| [gamesvr-dods](https://github.com/LacledesLAN/gamesvr-dods)                 | [gamesvr-dods-freeplay](https://github.com/LacledesLAN/gamesvr-dods-freeplay)             |
-| [gamesvr-factorio]()                                                        | [gamesvr-factorio-freeplay]()                                                             |
-| [gamesvr-garrysmod](https://github.com/LacledesLAN/gamesvr-garrysmod)       | [gamesvr-garrysmod-freeplay](https://github.com/LacledesLAN/gamesvr-garrysmod-freeplay)   |
-| [gamesvr-gesource](https://github.com/LacledesLAN/gamesvr-gesource)         | [gamesvr-gesource-freeplay](https://github.com/LacledesLAN/gamesvr-gesource-freeplay)     |
-| [gamesvr-goldsource](https://github.com/LacledesLAN/gamesvr-goldsource)     | [gamesvr-goldsource-cstrike](https://github.com/LacledesLAN/gamesvr-goldsource-cstrike)   |
-|                                                                             | [gamesvr-goldsource-dmc](https://github.com/LacledesLAN/gamesvr-goldsource-dmc)           |
-|                                                                             | [gamesvr-goldsource-hldm](https://github.com/LacledesLAN/gamesvr-goldsource-hldm)         |
-|                                                                             | [gamesvr-goldsource-tfc](https://github.com/LacledesLAN/gamesvr-goldsource-tfc)           |
-| [gamesvr-hl2dm](https://github.com/LacledesLAN/gamesvr-hl2dm)               | [gamesvr-hl2dm-freeplay]()                                                                |
-| [gamesvr-hldms]()                                                           | [gamesvr-hldms-freeplay](https://github.com/LacledesLAN/gamesvr-hl2dm-freeplay)           |
-| [gamesvr-killingfloor](https://github.com/LacledesLAN/gamesvr-killingfloor) |                                                                                           |
-| [gamesvr-minecraft](https://github.com/LacledesLAN/gamesvr-minecraft)       |                                                                                           |
-| [gamesvr-svencoop](https://github.com/LacledesLAN/gamesvr-svencoop)         | [gamesvr-svencoop-freeplay](https://github.com/LacledesLAN/gamesvr-svencoop-freeplay)     |
-| [gamesvr-tf2](https://github.com/LacledesLAN/gamesvr-tf2)                   | [gamesvr-tf2-blindfrag](https://github.com/LacledesLAN/gamesvr-tf2-blindfrag)             |
-|                                                                             | [gamesvr-tf2-freeplay](https://github.com/LacledesLAN/gamesvr-tf2-freeplay)               |
-|                                                                             | [gamesvr-tf2-ware](https://github.com/LacledesLAN/gamesvr-tf2-ware)                       |
-| [gamesvr-ut2k4]()                                                           | []()                                                                                      |
+| 1 ►                                                                         | 2                                                                       | Description                                   |
+| --------------------------------------------------------------------------- | ----------------------------------------------------------------------- | --------------------------------------------- |
+| [gamesvr-7daystodie](https://github.com/LacledesLAN/gamesvr-7daystodie)     |                                                                         | 7 Days to Die Server                          |
+|                                                                             | [-freeplay](https://github.com/LacledesLAN/gamesvr-7daystodie-freeplay) | └─ LL 7 Days to Die Freeplay Server           |
+| [gamesvr-blackmesa](https://github.com/LacledesLAN/gamesvr-blackmesa)       |                                                                         | Black Mesa Server                             |
+|                                                                             | [-freeplay](https://github.com/LacledesLAN/gamesvr-blackmesa-freeplay)  | └─ LL Black Mesa Freeplay Server              |
+| [gamesvr-csgo](https://github.com/LacledesLAN/gamesvr-csgo)                 |                                                                         | Counter-Strike GO Server                      |
+|                                                                             | [-freeplay](https://github.com/LacledesLAN/gamesvr-csgo-freeplay)       | ├─ LL Counter-Strike GO Freeplay Server       |
+|                                                                             | [-test](https://github.com/LacledesLAN/gamesvr-csgo-test)               | ├─ LL Counter-Strike GO Client Test Server    |
+|                                                                             | [-tourney](https://github.com/LacledesLAN/gamesvr-csgo-tourney)         | └─ LL Counter-Strike GO Tournament Server     |
+| [gamesvr-cssource](https://github.com/LacledesLAN/gamesvr-cssource)         |                                                                         | Counter-Strike Source Server                  |
+|                                                                             | [-freeplay]()                                                           |                                               |
+| [gamesvr-dods](https://github.com/LacledesLAN/gamesvr-dods)                 |                                                                         | Day of Defeat Source Server                   |
+|                                                                             | [-freeplay](https://github.com/LacledesLAN/gamesvr-dods-freeplay)       | └─ LL Day of Defat Source Server              |
+| [gamesvr-factorio]()                                                        |                                                                         | Factorio Server                               |
+|                                                                             | [-freeplay]()                                                           | └─ LL Factorio Freeplay Server                |
+| [gamesvr-garrysmod](https://github.com/LacledesLAN/gamesvr-garrysmod)       |                                                                         | Garry's Mod Server                            |
+|                                                                             | [-freeplay](https://github.com/LacledesLAN/gamesvr-garrysmod-freeplay)  | └─ LL Garry's Mod Freeplay Server             |
+| [gamesvr-gesource](https://github.com/LacledesLAN/gamesvr-gesource)         |                                                                         |                                               |
+|                                                                             | [-freeplay](https://github.com/LacledesLAN/gamesvr-gesource-freeplay)   |                                               |
+| [gamesvr-goldsource](https://github.com/LacledesLAN/gamesvr-goldsource)     |                                                                         |                                               |
+|                                                                             | [-cstrike](https://github.com/LacledesLAN/gamesvr-goldsource-cstrike)   |                                               |
+|                                                                             | [-dmc](https://github.com/LacledesLAN/gamesvr-goldsource-dmc)           |                                               |
+|                                                                             | [-hldm](https://github.com/LacledesLAN/gamesvr-goldsource-hldm)         |                                               |
+|                                                                             | [-tfc](https://github.com/LacledesLAN/gamesvr-goldsource-tfc)           |                                               |
+| [gamesvr-hl2dm](https://github.com/LacledesLAN/gamesvr-hl2dm)               |                                                                         | Half-Life 2: Deathmatch Server                |
+|                                                                             | [-freeplay](https://github.com/LacledesLAN/gamesvr-hl2dm-freeplay)      | └─ LL Half-Life 2: Deathmatch Freeplay Server |
+| [gamesvr-hldms]()                                                           |                                                                         |                                               |
+|                                                                             |                                                                         |                                               |
+| [gamesvr-killingfloor](https://github.com/LacledesLAN/gamesvr-killingfloor) |                                                                         |                                               |
+|                                                                             |                                                                         |                                               |
+| [gamesvr-minecraft](https://github.com/LacledesLAN/gamesvr-minecraft)       |                                                                         |                                               |
+|                                                                             |                                                                         |                                               |
+| [gamesvr-svencoop](https://github.com/LacledesLAN/gamesvr-svencoop)         | [-freeplay](https://github.com/LacledesLAN/gamesvr-svencoop-freeplay)   |                                               |
+|                                                                             |                                                                         |                                               |
+| [gamesvr-tf2](https://github.com/LacledesLAN/gamesvr-tf2)                   |                                                                         | Team Fortress 2 Server                        |
+|                                                                             | [-blindfrag](https://github.com/LacledesLAN/gamesvr-tf2-blindfrag)      | ├─ LL Team Fortress 2 Blind-Frag Server       |
+|                                                                             | [-freeplay](https://github.com/LacledesLAN/gamesvr-tf2-freeplay)        | ├─ LL Team Fortress 2 Freeplay Server         |
+|                                                                             | [-ware](https://github.com/LacledesLAN/gamesvr-tf2-ware)                | └─ LL Team Fortress 2 "TF2-Ware" Server       |
+| [gamesvr-ut2k4]()                                                           | []()                                                                    |                                               |
+|                                                                             |                                                                         |                                               |
 
 
 ### Standards we Follow
