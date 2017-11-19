@@ -12,8 +12,8 @@ If you're new to GIT or don't need advanced features **we recommend using the [G
 
 When using a webtool (such as [Snippet Generator](https://github.com/LacledesLAN/Snippet-Generator)) we recommend keeping it open in a browser you don't use for anything else. This will make it fast to find in your taskbar and make sure you don't accidentally close it as you navigate the web in your normal browser. Some alternative browers include [Brave](https://brave.com/), [Opera](http://www.opera.com/), or even [Microsoft Edge](https://www.microsoft.com/en-us/windows/microsoft-edge).
 
-### SSH
-You'll need an SSH client to connect to our Linux servers running Docker. This can be a pretty contested subject but we've enjoyed using [Token2Shell/MD for Windows 10](https://www.microsoft.com/store/apps/9NBLGGH2NCX9). Some alternatives are:
+### SSH Client
+You'll need an SSH client to connect to our Linux servers running Docker. Choice of SSH client can be pretty contested subject but we've enjoyed using [Token2Shell/MD for Windows 10](https://www.microsoft.com/store/apps/9NBLGGH2NCX9). Some alternatives are:
 * [putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 * [bitvise](https://www.bitvise.com/ssh-client-download) - Dudley's prefered backup client; includes SFTP support.
 * [SecureCRT](https://www.vandyke.com/products/securecrt/index.html) - Paid; 30-day trial availabl (see below)
@@ -28,7 +28,7 @@ To transfer files to an from a linux server you'll need a SFTP Client. Some reco
 For text editing we recommend [Visual Studio Code](https://code.visualstudio.com/) as we are updating all of your game server repos to use its features. To take full advantage of our setup install the plugins [Docker Support for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=PeterJausovec.vscode-docker), [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig), and [VSCode Great Icons](https://marketplace.visualstudio.com/items?itemName=emmanuelbeziat.vscode-great-icons).
 
 Alternatives:
-* [Notepad++](https://notepad-plus-plus.org/) (Windows
+* [Notepad++](https://notepad-plus-plus.org/) (Windows)
 * TextEdit (Apple; included with Mac OS)
 
 ### Source Server Remote Tools
@@ -46,4 +46,4 @@ There are really only two viable 3rd-party tools:
 * [Source Admin Tool](https://users.alliedmods.net/~drifter/SAT/) (relatively new and under active development
   * [Additional Info](https://forums.alliedmods.net/showthread.php?t=289370)
 
-Both tools work the same way. Put in the server <ip>:<port> and rcon password and hit "get log".
+Both tools work the same way. Put in the server `<ip>:<port>` and rcon password and hit "get log".
