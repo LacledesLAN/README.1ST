@@ -13,7 +13,7 @@ If you're new to GIT or don't need advanced features **we recommend using the [G
 When using a webtool (such as [Snippet Generator](https://github.com/LacledesLAN/Snippet-Generator)) we recommend keeping it open in a browser you don't use for anything else. This will make it fast to find in your taskbar and make sure you don't accidentally close it as you navigate the web in your normal browser. Some alternative browers include [Brave](https://brave.com/), [Opera](http://www.opera.com/), or even [Microsoft Edge](https://www.microsoft.com/en-us/windows/microsoft-edge).
 
 ### SSH
-You'll need an SSH client to connect to our Linux servers running Docker. This can be a pretty contested subject but we've enjoyed using [Token2Shell/MD for Winodws 10](https://www.microsoft.com/store/apps/9NBLGGH2NCX9). Some alternatives are:
+You'll need an SSH client to connect to our Linux servers running Docker. This can be a pretty contested subject but we've enjoyed using [Token2Shell/MD for Windows 10](https://www.microsoft.com/store/apps/9NBLGGH2NCX9). Some alternatives are:
 * [putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 * [bitvise](https://www.bitvise.com/ssh-client-download) - Dudley's prefered backup client; includes SFTP support.
 * [SecureCRT](https://www.vandyke.com/products/securecrt/index.html) - Paid; 30-day trial availabl (see below)
