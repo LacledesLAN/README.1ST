@@ -88,7 +88,7 @@ If, you use the cloud to build images then be prepared to build images locally i
 
 To be discoverable LAN servers accept broadcast traffic from searching game clients. In Linux the game server binds and listens to the appropriate port on 0.0.0.0 which is shared across the host's entire network stack. This model has long been a nuisance for admins as multiple servers cannot bind to the same port on 0.0.0.0. *(Windows-based servers listen to broadcast traffic differently and do not have this particular issue).*
 
-![hl2dm LAN browser](..\.images/hl2dm-lan-browser.png)
+![hl2dm LAN browser](..\images/hl2dm-lan-browser.png)
 
 Invisible game servers will sit empty unless traffic is purposely driven to them. While this may be ok in some situations it is not desirable for either public servers or technically disinclined attendees.
 
