@@ -1,5 +1,7 @@
 # Laclede's LAN Game Servers
 
+Be sure to check out our list of [recommended tools](RecommendedTools.md)! If you're new to LL or Docker see ["Docker at Laclede's LAN"](AboutDocker.md).
+
 ## Dockerized Game Servers
 When feasible we ["dockerize"](https://hub.docker.com/u/lacledeslan) our game servers utilizing [Docker Cloud](https://cloud.docker.com/app/lacledeslan/) for automated builds and use [Snippet-Generator](https://github.com/LacledesLAN/Snippet-Generator) to generate the launch strings.
 
