@@ -88,7 +88,7 @@ If, you use the cloud to build images then be prepared to build images locally i
 
 To be discoverable LAN servers accept broadcast traffic from searching game clients. In Linux the game server binds and listens to the appropriate port on 0.0.0.0 which is shared across the host's entire network stack. This model has long been a nuisance for admins as multiple servers cannot bind to the same port on 0.0.0.0. *(Windows-based servers listen to broadcast traffic differently and do not have this particular issue).*
 
-![hl2dm LAN browser][..\.images/hl2dm-lan-browser.png]
+![hl2dm LAN browser](..\.images/hl2dm-lan-browser.png)
 
 Invisible game servers will sit empty unless traffic is purposely driven to them. While this may be ok in some situations it is not desirable for either public servers or technically disinclined attendees.
 
@@ -159,7 +159,7 @@ Now when launching a container we can add it directly to the network as a first-
 docker run -it --rm --network=lan --ip 192.168.2.125 lacledeslan/gamesvr-hl2dm ./srcds_run -game hl2mp +map dm_overwatch -console +sv_lan 1
 ```
 
-One side effect is that the host won't be able to see the container despite. The current work around is to get a separate NIC that's exposed to the LAN without MACVLAN so that the container is treated as an external IP by the host.
+One side effect is that the host won't be able to see the container. The current work around is to get a separate NIC that's exposed to the LAN without MACVLAN so that the container is treated as an external IP by the host.
 
 We use this method for game servers that should be findable on the LAN.
 
