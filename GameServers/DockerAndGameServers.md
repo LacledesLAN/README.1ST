@@ -194,7 +194,7 @@ We haven't tried using IPVLAN at our events.
 * ["Linux 4 Noobs on reddit.com"](https://www.reddit.com/r/linux4noobs/)
 
 ### Docker Networking
-* [Docker container networking](Docker container networking)
+* [Docker container networking](https://docs.docker.com/engine/userguide/networking/)
 * [PlrauSight Course: Docker Networking](https://app.pluralsight.com/library/courses/docker-networking) (paid video content)
 * [Bridge vs Macvlan](http://hicu.be/bridge-vs-macvlan) ([mirror](https://archive.fo/nqetB))
 * [Macvlan and IPvlan basics](https://sreeninet.wordpress.com/2016/05/29/macvlan-and-ipvlan/) ([mirror](https://archive.fo/0US6k))
