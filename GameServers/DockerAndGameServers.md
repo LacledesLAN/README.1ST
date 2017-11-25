@@ -26,7 +26,7 @@ Optimize for the total ecosystem of images you will be deploying; trimming indiv
 
 ### Build Stock Images
 
-Start with a image containing the stock game server then build derivative "flavors" that build from it using `FROM`.
+Start with an image containing the stock game server then build derivative "flavors" that build from it using `FROM`.
 
 * Docker's underlying "Copy on Write" technology means *all* downstream images will share the same stock image - saving storage space and transportation bandwidth.
 * When troubleshooting admins can quickly determine if the issue lies in the stock image or the derived image.
@@ -42,11 +42,11 @@ The extent and frequency of customization by your group should be taken into acc
 | 3     | Stock   | Stock game server binaries & content  | Game update                       |
 | 4     | Stock   | Custom Content (maps, textures, ...)* | Add, delete, update               |
 | 5     | Stock   | Server dependencies (lib32gcc1, ...)  | Initial build only                |
-> *Added lower than vanilla game server to ensure stock content *never* gets overwritten by custom content.
+> *Added before vanilla game server to ensure custom content *never* overwrites stock content.
 
 ### Use Multi-Stage Builds Where Viable
 
-To build a game server the Dockerfile will use utilities and have dependencies that will just be cruft in the final image. Use [multi-stage builds](https://docs.docker.com/engine/userguide/eng-image/multistage-build/) to eliminate this bloat.
+To build a game server the Dockerfile will use utilities and have dependencies that would just be cruft in the final image. Use [multi-stage builds](https://docs.docker.com/engine/userguide/eng-image/multistage-build/) to eliminate this bloat.
 
 But be aware of cloud limitations! We've found that Docker Cloud will fail with multi-stage builds when the builder exceeds 4GB in size.
 
@@ -64,7 +64,7 @@ The above example is clean but adjusting `+maxplayers` would require modifying t
 docker run -d --net=host lacledeslan/gamesvr-csgo ./srcds_run -game csgo +game_type 0 +game_mode 1 +maxplayers 16 -tickrate 128 +map de_cache +sv_lan 1
 ```
 
-Additionally, by keeping a [CLI](https://en.wikipedia.org/wiki/Command-line_interface) as the default `ENTRYPOINT` a container can be spun up for interactive testing internals.
+Additionally, by keeping a [CLI](https://en.wikipedia.org/wiki/Command-line_interface) (such as BASH) as the default `ENTRYPOINT` a container can be spun up for interactive testing of internals.
 
 ### Pay Close Attention to File Ownership and Permissions
 
@@ -77,17 +77,17 @@ File ownership and permissions issues are the most common culprit when our image
 
 The week before your LAN, rebuild and test *all* of your production images. It is much better for things to break the week before your event rather than the day of.
 
-> See also: ["Finagle's law"](https://en.wikipedia.org/wiki/Finagle%27s_law)
+> "Anything that can go wrong, will—at the worst possible moment." - ["Finagle's law"](https://en.wikipedia.org/wiki/Finagle%27s_law)
 
 ### Be Prepared to Build Locally
 
 If you use the cloud to build images, be prepared to build images locally in a disaster situation. Assume your cloud build will take 3x times longer than normal when you're in a time crunch. We use Docker Cloud and have observed weekday builds that takes ~45 minutes on average will take upwards of 3 hours on weekends.
 
-> See also: ["Hofstadter's law"](https://en.wikipedia.org/wiki/Hofstadter%27s_law)
+> "Hofstadter's Law: It always takes longer than you expect, even when you take into account [Hofstadter's law](https://en.wikipedia.org/wiki/Hofstadter%27s_law)."
 
 ## Networking Containerized Game Servers
 
-To be discoverable LAN servers accept broadcast traffic from searching game clients. In Linux the game server binds and listens to the appropriate port on 0.0.0.0 which is shared across the host's entire network stack. This model has long been a nuisance for admins as multiple servers cannot bind to the same port on 0.0.0.0. *(Windows-based servers listen to broadcast traffic differently and do not have this particular issue).*
+To be discoverable LAN servers respond to broadcast traffic from searching game clients with basic server info (name, map, player count, etc). In Linux the game server binds and listens to the appropriate port on 0.0.0.0 which is shared across the host's entire network stack. This model has long been a nuisance for admins as multiple servers cannot bind to the same port on 0.0.0.0. *(Windows-based servers listen to broadcast traffic differently and do not have this particular issue).*
 
 ![hl2dm LAN browser](https://raw.githubusercontent.com/LacledesLAN/README.1ST/master/.images/hl2dm-lan-browser.png)
 
@@ -103,15 +103,15 @@ By default Docker containers are connected to the `bridge` network. This network
 
 ### Connecting Container to Host's Network Stack
 
-Containers can be connected to the host's network stack via Docker's `host` network. This removes the container from all network isolation - all network interfaces defined on the host will be accessible. This is useful for developing and troubleshooting game server images but we don't recommend otherwise.
+Containers can be connected to the host's network stack via Docker's `host` network. This removes the container from all network isolation - all network interfaces defined on the host will be accessible. This is useful for developing and troubleshooting game server images but we don't recommend this method otherwise.
 
-Network behavior is identical to running the game server on the host OS. To run multiple game servers each will need to be configured to run on different interfaces and/or ports. The first server that runs will be the one that binds to 0.0.0.0:\<port>; subsequent servers will fail to bind and won't show up in lan browsers.
+Network behavior is identical to running the game server on the host OS. To run multiple game servers each will need to be configured to run on different interfaces and/or ports. The first server that binds to 0.0.0.0:\<port> will be discoverable by LAN browsers - subsequent servers will be hidden.
 
 ```shell
-docker run -it --rm --net=host lacledeslan/gamesvr-csgo ./srcds_run -game csgo +game_type 0 +game_mode 1 -tickrate 128 -console +map de_cache +sv_lan 1
+docker run -it --rm --net=host lacledeslan/gamesvr-csgo ./srcds_run -game csgo +game_type 0 +game_mode 1 -tickrate 128 -ip 0.0.0.0 -ip 192.168.1.10 -console +map de_cache +sv_lan 1
 ```
 
-> Note: The `host` network has no customization options - any network configuration must be preformed on the host operating system.
+> Note: The `host` network has no customization options - any network configuration must be preformed on the host operating system and/or the game server itself.
 
 ### Publishing Ports
 
@@ -148,19 +148,19 @@ Using the MACVLAN driver is the recommended way to connect containers directly t
 * [Promiscuous mode](https://en.wikipedia.org/wiki/Promiscuous_mode) must be enabled on the Docker host's network interface card(s).
 * The LAN must support multiple MAC addresses per physical port.
 
-Assuming our LAN is 192.168.0.0/21 we'll create a Docker network called "lan" on the host. We'll specify the valid range of container ip address using `ip-range` and the physical interface to be used with `-o parent`.
+Assuming our LAN is 192.168.0.0/21 we'll create a Docker network called "lan" on the host. We'll specify the valid range of container ip address using `ip-range` and the physical interface(s) to be used with `-o parent`.
 
 ```shell
 docker network create -d macvlan --subnet=192.168.0.0/21 --ip-range=192.168.2.0/24 --gateway=192.168.1.1 -o parent=bond0 lan
 ```
 
-Now when launching a container we can add it directly to the network as a first-class citizen. Not only does the container get its own IP but it'll also get a MAC address.
+Now when launching a container it can be added directly to the network as a first-class citizen. Not only does the container get its own IP but it'll also get a MAC address.
 
 ```shell
 docker run -it --rm --network=lan --ip 192.168.2.125 lacledeslan/gamesvr-hl2dm ./srcds_run -game hl2mp +map dm_overwatch -console +sv_lan 1
 ```
 
-One side effect is that the host won't be able to see the container. The current work around is to get a separate NIC that's exposed to the LAN without MACVLAN so that the container is treated as an external IP by the host.
+One side effect is that the host won't be able to see the container despite being on the same network. The current work around is to get a separate NIC that's exposed to the LAN without MACVLAN so that the container is treated as an external IP by the host.
 
 We use this method for game servers that should be findable on the LAN.
 
@@ -174,9 +174,9 @@ Some facets of shared MAC addresses to consider are:
 * If the host uses DHCP to obtain network settings the DHCP server *must* be configured for ClientID; otherwise traffic will get dropped.
 
 Currently the general wisdom on the Docker community is to *only* use IPVLAN over MACVLAN if:
+* Host policy prohibits network interfaces from using promiscuous mode (public clouds).
 * Network performance is deteriorated due to a large number of MAC addresses
 * Network policies limit the number of allowed MAC addresses on a single physical port.
-* Policy prohibits the host's interfaces cannot use promiscuous mode (public clouds).
 * The parent interface is wireless.
 
 We haven't tried using IPVLAN at our events.
@@ -195,7 +195,6 @@ We haven't tried using IPVLAN at our events.
 * ["Linux 4 Noobs on reddit.com"](https://www.reddit.com/r/linux4noobs/)
 
 ### Docker Networking
-* [Docker container networking](https://docs.docker.com/engine/userguide/networking/)
 * [PlrauSight Course: Docker Networking](https://app.pluralsight.com/library/courses/docker-networking) (paid video content)
 * [Bridge vs Macvlan](http://hicu.be/bridge-vs-macvlan) ([mirror](https://archive.fo/nqetB))
 * [Macvlan and IPvlan basics](https://sreeninet.wordpress.com/2016/05/29/macvlan-and-ipvlan/) ([mirror](https://archive.fo/0US6k))
