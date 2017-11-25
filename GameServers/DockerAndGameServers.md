@@ -72,7 +72,7 @@ File ownership and permissions issues are the most common culprit when our image
 * Take advantage of the `--chown` flag on `ADD`/`COPY` as recursive `RUN chown`/`RUN chmod` operations are *slow*.
 * Use `ONBUILD USER root` to simplify downstream Dockerfiles.
 
-### Rebuild *Everything* the Week Before you Event
+### Rebuild *Everything* the Week Before your Event
 
 The week before your LAN rebuild and test *all* of your production images. It is much better for things to break the week before you event rather than the day of.
 
