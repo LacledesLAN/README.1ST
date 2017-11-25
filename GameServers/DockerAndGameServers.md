@@ -22,7 +22,7 @@ A driving notion behind the containerization movement is that applications shoul
 
 > We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3% -Donald Knuth
 
-Optimize for the total ecosystem of images you will be deploying - trimming individual image sizes is counter-productive to maximizing the sharing of layers. [Squashing images](https://stackoverflow.com/questions/41764336/how-does-the-new-docker-squash-work) eliminates shareability resulting in more consumed space - not less.
+Optimize for the total ecosystem of images you will be deploying; trimming individual image sizes is counterproductive to maximizing the sharing of layers. [Squashing images](https://stackoverflow.com/questions/41764336/how-does-the-new-docker-squash-work) eliminates shareability resulting in more consumed space - not less.
 
 ### Build Stock Images
 
@@ -33,19 +33,19 @@ Start with a image containing the stock game server then build derivative "flavo
 
 ### Reduce Build Times
 
-The layer height of content should be proportional to the extent and frequency it's customized by your group. When Docker's build mechanism can cache unchanged content the faster the image can be rebuilt. Faster rebuilds means faster tweaking and troubleshooting. At Laclede's LAN we typically stack layers as follows:
+The extent and frequency of customization by your group should be taken into account when planning the proper layer height of content. When Docker's build mechanism can cache unchanged content the image can be rebuilt faster. Faster rebuilds means faster tweaking and troubleshooting. At Laclede's LAN we typically stack layers as follows:
 
 | Depth | Image   | Content                              | Change Reasons                    |
 | ----- | ------- | ------------------------------------ | --------------------------------- |
 | 1     | Derived | Config Files                         | Rule changes                      | 
-| 2     | Derived | Mods (metamod, sourcemod, etc)       | Customize and update              |
-| 3     | Stock   | Custom Content (maps, textures, etc) | Add, delete, update               |
+| 2     | Derived | Mods (metamod, sourcemod, ...)       | Customize and update              |
+| 3     | Stock   | Custom Content (maps, textures, ...) | Add, delete, update               |
 | 4     | Stock   | Stock game server data               | Game update                       |
-| 5     | Stock   | Server dependencies (lib32gcc1, etc) | Initial build only                |
+| 5     | Stock   | Server dependencies (lib32gcc1, ...) | Initial build only                |
 
 ### Use Multi-Stage Builds Where Viable
 
-To build a game server the Dockerfile will use utilities and have dependencies that wil just be cruft in the final image. Use [multi-stage builds](https://docs.docker.com/engine/userguide/eng-image/multistage-build/) to eliminate this bloat.
+To build a game server the Dockerfile will use utilities and have dependencies that will just be cruft in the final image. Use [multi-stage builds](https://docs.docker.com/engine/userguide/eng-image/multistage-build/) to eliminate this bloat.
 
 But be aware of cloud limitations! We've found that Docker Cloud will fail with multi-stage builds when the builder exceeds 4GB in size.
 
@@ -74,13 +74,13 @@ File ownership and permissions issues are the most common culprit when our image
 
 ### Rebuild *Everything* the Week Before your Event
 
-The week before your LAN rebuild and test *all* of your production images. It is much better for things to break the week before you event rather than the day of.
+The week before your LAN, rebuild and test *all* of your production images. It is much better for things to break the week before your event rather than the day of.
 
 > See also: ["Finagle's law"](https://en.wikipedia.org/wiki/Finagle%27s_law)
 
 ### Be Prepared to Build Locally
 
-If, you use the cloud to build images then be prepared to build images locally in a disaster situation. Assume your cloud build will take 3x times longer than normal when you're in a time crunch. We use Docker Cloud and have observed weekday builds that takes ~45 minutes on average will take upwards of 3 hours on weekends.
+If you use the cloud to build images, be prepared to build images locally in a disaster situation. Assume your cloud build will take 3x times longer than normal when you're in a time crunch. We use Docker Cloud and have observed weekday builds that takes ~45 minutes on average will take upwards of 3 hours on weekends.
 
 > See also: ["Hofstadter's law"](https://en.wikipedia.org/wiki/Hofstadter%27s_law)
 
@@ -90,7 +90,7 @@ To be discoverable LAN servers accept broadcast traffic from searching game clie
 
 ![hl2dm LAN browser](https://raw.githubusercontent.com/LacledesLAN/README.1ST/master/.images/hl2dm-lan-browser.png)
 
-Invisible game servers will sit empty unless traffic is purposely driven to them. While this may be ok in some situations it is not desirable for either public servers or technically disinclined attendees.
+Invisible game servers will sit empty unless traffic is purposely driven to them. While this may be OK in some situations it is not desirable for either public servers or technically disinclined attendees.
 
 There are multiple methods to attach a containerized game server to the network; for each method we'll discuss the ramifications on broadcast traffic.
 
