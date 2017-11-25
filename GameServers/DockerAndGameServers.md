@@ -42,7 +42,7 @@ The extent and frequency of customization by your group should be taken into acc
 | 3     | Stock   | Stock game server binaries & content  | Game update                       |
 | 4     | Stock   | Custom Content (maps, textures, ...)* | Add, delete, update               |
 | 5     | Stock   | Server dependencies (lib32gcc1, ...)  | Initial build only                |
-> Added lower than vanilla game server to ensure stock content *never* gets overwritten by custom content.
+> *Added lower than vanilla game server to ensure stock content *never* gets overwritten by custom content.
 
 ### Use Multi-Stage Builds Where Viable
 
