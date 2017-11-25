@@ -35,13 +35,14 @@ Start with a image containing the stock game server then build derivative "flavo
 
 The extent and frequency of customization by your group should be taken into account when planning the proper layer height of content. When Docker's build mechanism can cache unchanged content the image can be rebuilt faster. Faster rebuilds means faster tweaking and troubleshooting. At Laclede's LAN we typically stack layers as follows:
 
-| Depth | Image   | Content                              | Change Reasons                    |
-| ----- | ------- | ------------------------------------ | --------------------------------- |
-| 1     | Derived | Config Files                         | Rule changes                      | 
-| 2     | Derived | Mods (metamod, sourcemod, ...)       | Customize and update              |
-| 3     | Stock   | Custom Content (maps, textures, ...) | Add, delete, update               |
-| 4     | Stock   | Stock game server data               | Game update                       |
-| 5     | Stock   | Server dependencies (lib32gcc1, ...) | Initial build only                |
+| Depth | Image   | Content                               | Change Reasons                    |
+| ----- | ------- | ------------------------------------- | --------------------------------- |
+| 1     | Derived | Config Files                          | Rule changes                      | 
+| 2     | Derived | Mods (metamod, sourcemod, ...)        | Customize and update              |
+| 3     | Stock   | Stock game server binaries & content  | Game update                       |
+| 4     | Stock   | Custom Content (maps, textures, ...)* | Add, delete, update               |
+| 5     | Stock   | Server dependencies (lib32gcc1, ...)  | Initial build only                |
+> Added lower than vanilla game server to ensure stock content *never* gets overwritten by custom content.
 
 ### Use Multi-Stage Builds Where Viable
 
