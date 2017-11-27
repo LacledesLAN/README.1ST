@@ -8,7 +8,7 @@ When feasible we ["dockerize"](https://hub.docker.com/u/lacledeslan) our game se
 ### Image Catalog
 
 #### Builder Image
-We use [docker image "SteamCMD"](https://github.com/LacledesLAN/SteamCMD) to build most of our game servers. In addition to including [SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD) this image provides common tools such as `bzip2`, `curl`, `git`, `tar`, and `wget`.
+We use [docker image "SteamCMD"](https://github.com/LacledesLAN/SteamCMD) to build most of our game servers. In addition to including [SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD) this image provides common tools such as `bzip2`, `curl`, `tar`, and `wget`.
 
 #### Game Servers
 Stock images on the left with derivative "flavor" images to the right.
