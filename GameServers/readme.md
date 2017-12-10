@@ -54,7 +54,7 @@ Stock images on the left with derivative "flavor" images to the right.
 |                                                                             | [-blindfrag](https://github.com/LacledesLAN/gamesvr-tf2-blindfrag)      | &nbsp;&nbsp;├─ LL Team Fortress 2 Blind-Frag Server           |
 |                                                                             | [-freeplay](https://github.com/LacledesLAN/gamesvr-tf2-freeplay)        | &nbsp;&nbsp;├─ LL Team Fortress 2 Freeplay Server             |
 |                                                                             | [-ware](https://github.com/LacledesLAN/gamesvr-tf2-ware)                | &nbsp;&nbsp;└─ LL Team Fortress 2 "TF2-Ware" Server           |
-| [gamesvr-ut2k4](https://github.com/LacledesLAN/gamesvr-ut2k4)               |                                                                         | Unreal Tournament 2004 Server                                 |
+| [gamesvr-ut2k4](https://github.com/LacledesLAN/gamesvr-ut2004)              |                                                                         | Unreal Tournament 2004 Server                                 |
 |                                                                             |                                                                         |                                                               |
 
 ### Our Standards
