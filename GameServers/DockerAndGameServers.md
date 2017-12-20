@@ -1,6 +1,6 @@
 # Using Docker for Game Servers
 
-The purpose of this document is to provide a high-level overview of our experiences using Docker to manage game servers at [Laclede's LAN](https://lacledeslan.com) events. A basic working knowledge of Docker and Linux networking is recommended (see *appendices* for learning resources).
+The purpose of this document is to provide a high-level overview of our preferred practices and experiences using Docker to manage game servers at [Laclede's LAN](https://lacledeslan.com) events. A basic working knowledge of Docker and Linux networking is recommended (see *appendices* for learning resources).
 
 ## Why Docker?
 
