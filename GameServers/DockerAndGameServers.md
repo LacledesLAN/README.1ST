@@ -2,11 +2,12 @@
 
 The purpose of this document is to provide a high-level overview of our preferred practices and experiences using Docker to manage game servers at [Laclede's LAN](https://lacledeslan.com) events. A basic working knowledge of Docker and Linux networking is recommended (see *appendices* for learning resources).
 
-## Why Docker?
+## Why Docker
 
 [Docker](https://docs.docker.com/) is an open-source project to easily create lightweight, portable, self-sufficient containers from any application. The container that a developer builds and tests is the same container that will be used in production.
 
 The concept is similar to bundling a game-server inside a virtual machine but offers some advantages:
+
 * **Lightweight** - Containers don't need a guest operating system or any unnecessary processes. This means fewer CPU cycles and less consumed RAM.
 * **Portable** - Containers are instantiated from easily-transportable images; any Docker host with the appropriate image can start creating containers.
 * **Self-sufficient** - Containers don't need to be configured for resources (virtual hardware weights) or environment (network); they run like any other process on a host.
@@ -37,7 +38,7 @@ The extent and frequency of customization by your group should be taken into acc
 
 | Depth | Image   | Content                               | Change Reasons                    |
 | ----- | ------- | ------------------------------------- | --------------------------------- |
-| 1     | Derived | Config Files                          | Rule changes                      | 
+| 1     | Derived | Config Files                          | Rule changes                      |
 | 2     | Derived | Mods (metamod, sourcemod, ...)        | Customize and update              |
 | 3     | Stock   | Stock game server binaries & content  | Game update                       |
 | 4     | Stock   | Custom Content (maps, textures, ...)* | Add, delete, update               |
@@ -174,6 +175,7 @@ Some facets of shared MAC addresses to consider are:
 * If the host uses DHCP to obtain network settings the DHCP server *must* be configured for ClientID; otherwise traffic will get dropped.
 
 Currently the general wisdom on the Docker community is to *only* use IPVLAN over MACVLAN if:
+
 * Host policy prohibits network interfaces from using promiscuous mode (public clouds).
 * Network performance is deteriorated due to a large number of MAC addresses
 * Network policies limit the number of allowed MAC addresses on a single physical port.
@@ -184,6 +186,7 @@ We haven't tried using IPVLAN at our events.
 ## Appendices
 
 ### Learning Docker
+
 * [Part 1 - Introduction to Docker (Official Webinar)](https://training.docker.com/introduction-to-docker)
 * [Part 2 -Docker Fundamentals (Official Webinar)](https://training.docker.com/docker-fundamentals)
 * [Part 3 - Docker Operations (Official Webinar)](https://training.docker.com/docker-operations)
@@ -192,9 +195,11 @@ We haven't tried using IPVLAN at our events.
 * [Docker Container’s Filesystem Demystified](https://medium.com/@nagarwal/docker-containers-filesystem-demystified-b6ed8112a04a) ([mirror](http://archive.is/C6Sxc))
 
 ### Learning Basic Linux + Networking
+
 * ["Linux 4 Noobs on reddit.com"](https://www.reddit.com/r/linux4noobs/)
 
 ### Docker Networking
+
 * [PlrauSight Course: Docker Networking](https://app.pluralsight.com/library/courses/docker-networking) (paid video content)
 * [Bridge vs Macvlan](http://hicu.be/bridge-vs-macvlan) ([mirror](https://archive.fo/nqetB))
 * [Macvlan and IPvlan basics](https://sreeninet.wordpress.com/2016/05/29/macvlan-and-ipvlan/) ([mirror](https://archive.fo/0US6k))

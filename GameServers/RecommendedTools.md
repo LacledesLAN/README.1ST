@@ -14,27 +14,33 @@ To contribute to our repos you should be familiar with the ["GitHub Flow"](https
 
 ## Text Editor
 
-We recommend [Visual Studio Code](https://code.visualstudio.com/); many of our repos use its features such as "tasks". We recommend installing the plugins [Docker Support for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=PeterJausovec.vscode-docker), [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig), and [VSCode Great Icons](https://marketplace.visualstudio.com/items?itemName=emmanuelbeziat.vscode-great-icons).
+We recommend [Visual Studio Code](https://code.visualstudio.com/) and have designed most of our game-server repositories to work with its features (such as tasks). See [Working with LL Game Server Repos](WorkingWithOurRepos.md) for details and recommended plugins.
 
 Alternatives:
+
 * [Atom Editor](https://atom.io/)
 * [Notepad++](https://notepad-plus-plus.org/) (Windows only)
 
 ## Working with Linux
 
 ### SSH
+
 A SSH client is needed to remotely connect to our Linux servers. The choice of client can be a contentious topic but we've enjoyed using [Token2Shell/MD for Windows 10](https://www.microsoft.com/store/apps/9NBLGGH2NCX9). Some free alternatives are:
+
 * [Bitvise SSH Client](https://www.bitvise.com/ssh-client-download) (includes SFTP support)
 * [putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
 ### SFTP Client
+
 To transfer files to an from a linux server you'll want a [SFTP Client](https://en.wikipedia.org/wiki/Category:SFTP_clients). Our recommendations are:
+
 * [Bitvise](https://www.bitvise.com/ssh-client-download) - includes SSH support recommended by @dudleycodes
 * [WinSCP](http://winscp.net/) - can launch putty for ssh support; recommended by @JustinBenedick
 
 ## Working with SRCDS (Source Dedicated Server)
 
 Once a dedicated Source server is running there are three ways to issues commands:
+
 * In the sever's terminal window (not practical with our Docker setup)
 * Connecting a game client and use rcon (can't be done with our tournament servers)
 * **Using a 3rd-party, remote tool** (recommended)
@@ -48,7 +54,7 @@ There are really only two viable 3rd-party tools:
 * [Source Admin Tool](https://users.alliedmods.net/~drifter/SAT/) (relatively new and light on features)
   * [Additional Info](https://forums.alliedmods.net/showthread.php?t=289370)
 
-You're going to want both tools readily available as your work with SRCDS servers. Both tools work the same way: put in the server <ip>:<port> and rcon password and hit "get log".
+You're going to want both tools readily available as your work with SRCDS servers. Both tools work the same way: put in the server &lt;ip&gt;:&lt;port&gt; and rcon password and hit "get log".
 
 ## Working with Web-Tools
 
@@ -57,6 +63,7 @@ You're going to want both tools readily available as your work with SRCDS server
 During the hustle and bustle of an event we recommend using a unique web browser for web-tools such as [Snippet Generator](https://github.com/LacledesLAN/Snippet-Generator). This makes the tool easy to find in your taskbar/dock and prevents accidentally closing the wrong tab as your use your normal browser(s) to navigate the web.
 
 Some lesser-used alternative browsers include:
+
 * [Brave](https://brave.com/)
 * [Microsoft Edge](https://www.microsoft.com/en-us/windows/microsoft-edge)
 * [Opera](http://www.opera.com/)

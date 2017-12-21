@@ -1,4 +1,4 @@
-## Laclede’s LAN Code of Conduct for Open Source Projects
+# Laclede’s LAN Code of Conduct for Open Source Projects
 
 The Laclede’s LAN team and community is made up of a mixture of professionals and volunteers from the Greater Saint Louis area and beyond. In the interests of fostering a collaborative environment we have a few ground rules for community participants.
 

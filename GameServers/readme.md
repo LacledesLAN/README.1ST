@@ -1,16 +1,23 @@
 # Laclede's LAN Game Servers
 
-> Related resource: * [Recommended Tools for Game Server Admins](RecommendedTools.md)
+## Related Documents
+
+* [Using Docker for Game Servers](DockerAndGameServers.md)
+* [Recommended Tools for Game Server Admins](RecommendedTools.md)
+* [Working with our Game Server Repos](WorkingWithOurRepos.md)
 
 ## Dockerized Game Servers
+
 When feasible we ["dockerize"](https://hub.docker.com/u/lacledeslan) our game servers utilizing [Docker Cloud](https://cloud.docker.com/app/lacledeslan/) for automated builds and use [Snippet-Generator](https://github.com/LacledesLAN/Snippet-Generator) to generate the launch strings. For an overview of our best-practices and experiences using Docker at Laclede's LAN events see ["Using Docker for Game Servers"](DockerAndGameServers.md).
 
 ### Image Catalog
 
 #### Builder Image
+
 We use [docker image "SteamCMD"](https://github.com/LacledesLAN/SteamCMD) to build most of our game servers. In addition to including [SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD) this image provides common tools such as `bzip2`, `curl`, `tar`, and `wget`.
 
 #### Game Servers
+
 Stock images on the left with derivative "flavor" images to the right.
 
 | Stock Image                                                                 | Derived "flavor" Image                                                  | Description                                                   |
@@ -58,6 +65,7 @@ Stock images on the left with derivative "flavor" images to the right.
 ### Our Standards
 
 #### Docker Images
+
 * Image names for game servers start with `gamesvr`.
 * Derived images names are appended with `-description` where "description" describes function.
 * All binaries and content are nested in `/app/`.
@@ -66,11 +74,13 @@ Stock images on the left with derivative "flavor" images to the right.
   * Derived images change the username to reflect the current image (e.g. user `CSGO` becomes `CSGOTourney`).
 
 #### Source Repos
+
 * Content meant for `/app/` (inside the image) are stored in `/dist/`.
   * Any Linux specific content is stored in `/dist.linux/`.
   * Any Windows specific content is stored in `/dist.windows/`.
 
 ### Build Triggers
+
 We use a running instance of [API Reactor](https://github.com/dudleycodes/APIReactor) to monitor steam games for updates; when an update is detected (or 21 days w/o an update pass) it triggers build of ['watchers' on Docker Hub](https://hub.docker.com/u/llgameserverbot/). Corresponding [automated builds](https://hub.docker.com/u/lacledeslan/) have repository links connected which triggers builds.
 
 ### Notes on Source Dedicated Servers (SRCDS)
