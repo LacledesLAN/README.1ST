@@ -1,4 +1,4 @@
-# Noithing To See Here!
+# Nothing To See Here
 
 **[This folder is just for images; click here to return to index](//github.com/LacledesLAN/README.1ST)**
 
