@@ -6,21 +6,9 @@
 * [Recommended Tools for Game Server Admins](RecommendedTools.md)
 * [Working with our Game Server Repos](WorkingWithOurRepos.md)
 
-## Dockerized Game Servers
+### Game Server Catalog
 
-When feasible we ["dockerize"](https://hub.docker.com/u/lacledeslan) our game servers utilizing [Docker Cloud](https://cloud.docker.com/app/lacledeslan/) for automated builds and use [Snippet-Generator](https://github.com/LacledesLAN/Snippet-Generator) to generate the launch strings. For an overview of our best-practices and experiences using Docker at Laclede's LAN events see ["Using Docker for Game Servers"](DockerAndGameServers.md).
-
-### Image Catalog
-
-#### Builder Image
-
-We use [docker image "SteamCMD"](https://github.com/LacledesLAN/SteamCMD) to build most of our game servers. In addition to including [SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD) this image provides common tools such as `bzip2`, `curl`, `tar`, and `wget`.
-
-#### Game Servers
-
-Stock images on the left with derivative "flavor" images to the right.
-
-| Stock Image                                                                                       | Build Status                                                                                                                                                      | Description                                    |
+| Repository                                                                                        | Build Status                                                                                                                                                      | Description                                    |
 | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
 | [gamesvr-7daystodie](https://github.com/LacledesLAN/gamesvr-7daystodie)                           |                                                                                                                                                                   | 7 Days to Die Server                           |
 | &nbsp;&nbsp;&nbsp;&nbsp;└─[─freeplay](https://github.com/LacledesLAN/gamesvr-7daystodie-freeplay) |                                                                                                                                                                   | LL 7 Days to Die Freeplay Server               |
@@ -52,7 +40,7 @@ Stock images on the left with derivative "flavor" images to the right.
 | &nbsp;&nbsp;&nbsp;&nbsp;└─[─freeplay](https://github.com/LacledesLAN/gamesvr-hl2dm-freeplay)      | [![Build Status](https://travis-ci.org/LacledesLAN/gamesvr-hl2dm-freeplay.svg?branch=master)](https://travis-ci.org/LacledesLAN/gamesvr-hl2dm-freeplay)           | LL Half-Life 2: Deathmatch Freeplay Server     |
 | [gamesvr-hldms](https://github.com/LacledesLAN/gamesvr-hldms)                                     |                                                                                                                                                                   | Half-Life Deathmatch: Source                   |
 | &nbsp;&nbsp;&nbsp;&nbsp;└─[─freeplay](https://github.com/LacledesLAN/gamesvr-hldms-freeplay)      |                                                                                                                                                                   | LL Half-Life Deathmatch Source Freeplay Server |
-| [gamesvr-minecraft](https://github.com/LacledesLAN/gamesvr-minecraft)                             |                                                                                                                                                                   | Minecraft Server                               |
+| [gamesvr-minecraft](https://github.com/LacledesLAN/gamesvr-minecraft)                             | [![Build Status](https://travis-ci.org/LacledesLAN/gamesvr-minecraft.svg?branch=master)](https://travis-ci.org/LacledesLAN/gamesvr-minecraft)                     | Minecraft Server                               |
 | [gamesvr-svencoop](https://github.com/LacledesLAN/gamesvr-svencoop)                               |                                                                                                                                                                   | Sven Co-op Server                              |
 | &nbsp;&nbsp;&nbsp;&nbsp;└─[─freeplay](https://github.com/LacledesLAN/gamesvr-svencoop-freeplay)   |                                                                                                                                                                   | LL Sven Co-Op Freeplay Server                  |
 | [gamesvr-tf2](https://github.com/LacledesLAN/gamesvr-tf2)                                         |                                                                                                                                                                   | Team Fortress 2 Server                         |
@@ -61,6 +49,16 @@ Stock images on the left with derivative "flavor" images to the right.
 | &nbsp;&nbsp;&nbsp;&nbsp;└─[─ware](https://github.com/LacledesLAN/gamesvr-tf2-ware)                |                                                                                                                                                                   | LL Team Fortress 2 "TF2-Ware" Server           |
 | [gamesvr-ut2004](https://github.com/LacledesLAN/gamesvr-ut2004)                                   |                                                                                                                                                                   | Unreal Tournament 2004 Server                  |
 |                                                                                                   |                                                                                                                                                                   |                                                |
+
+#### Builder Image
+
+| Image    | Build Status | Notes |
+| -------- | ------------ | ----- |
+| SteamCMD |  | |
+
+## Dockerized Game Servers
+
+When feasible we ["dockerize"](https://hub.docker.com/u/lacledeslan) our game servers utilizing [Travis CI](https://travis-ci.org/LacledesLAN) for automated builds and tests. We use [Snippet-Generator](https://github.com/LacledesLAN/Snippet-Generator) to generate the launch strings. For an overview of our best-practices and experiences using Docker at Laclede's LAN events see ["Using Docker for Game Servers"](DockerAndGameServers.md).
 
 ### Our Standards
 
