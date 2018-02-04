@@ -1,12 +1,8 @@
 # Laclede's LAN Game Servers
 
-## Related Documents
+[Using Docker for Game Servers](DockerAndGameServers.md) | [Recommended Tools for Game Server Admins](RecommendedTools.md) | [Working with our Game Server Repos](WorkingWithOurRepos.md)
 
-* [Using Docker for Game Servers](DockerAndGameServers.md)
-* [Recommended Tools for Game Server Admins](RecommendedTools.md)
-* [Working with our Game Server Repos](WorkingWithOurRepos.md)
-
-### Game Server Catalog
+## Game Server Catalog
 
 | Repository                                                                                        | Build Status                                                                                                                                                                                                          | Description                                    |
 | ------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
@@ -46,13 +42,12 @@
 | [gamesvr-tf2](https://github.com/LacledesLAN/gamesvr-tf2)                                         | [![Docker Cloud Build](https://raw.githubusercontent.com/LacledesLAN/README.1ST/master/.images/build_dockercloud.png)](https://cloud.docker.com/app/lacledeslan/repository/docker/lacledeslan/gamesvr-tf2/)           | Team Fortress 2 Server                         |
 | &nbsp;&nbsp;&nbsp;&nbsp;├─[─blindfrag](https://github.com/LacledesLAN/gamesvr-tf2-blindfrag)      | [![Docker Cloud Build](https://raw.githubusercontent.com/LacledesLAN/README.1ST/master/.images/build_dockercloud.png)](https://cloud.docker.com/app/lacledeslan/repository/docker/lacledeslan/gamesvr-tf2-blindfrag/) | LL Team Fortress 2 Blind-Frag Server           |
 | &nbsp;&nbsp;&nbsp;&nbsp;├─[─freeplay](https://github.com/LacledesLAN/gamesvr-tf2-freeplay)        | [![Docker Cloud Build](https://raw.githubusercontent.com/LacledesLAN/README.1ST/master/.images/build_dockercloud.png)](https://cloud.docker.com/app/lacledeslan/repository/docker/lacledeslan/gamesvr-tf2-freeplay/)  | LL Team Fortress 2 Freeplay Server             |
-| &nbsp;&nbsp;&nbsp;&nbsp;└─[─ware](https://github.com/LacledesLAN/gamesvr-tf2-ware)                |                                                                                                                                                                                                                       | LL Team Fortress 2 "TF2-Ware" Server           |
-| [gamesvr-ut2004](https://github.com/LacledesLAN/gamesvr-ut2004)                                   |                                                                                                                                                                                                                       | Unreal Tournament 2004 Server                  |
+| [gamesvr-ut2004](https://github.com/LacledesLAN/gamesvr-ut2004)                                   | [![Build Status](https://travis-ci.org/LacledesLAN/gamesvr-ut2004.svg?branch=master)](https://travis-ci.org/LacledesLAN/gamesvr-ut2004)                                                                               | Unreal Tournament 2004 Server                  |
 |                                                                                                   |                                                                                                                                                                                                                       |                                                |
 
-#### Docker Builder Images
+### Docker Builder Images
 
-| Image                                               | Build Status                                                                                                                | Include CLI Utilities                                                                        |
+| Repository                                          | Build Status                                                                                                                | Include CLI Utilities                                                                        |
 | --------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | [SteamCMD](https://github.com/LacledesLAN/SteamCMD) | [![Build Status](https://travis-ci.org/LacledesLAN/SteamCMD.svg?branch=master)](https://travis-ci.org/LacledesLAN/SteamCMD) | bzip2, curl, [SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD), tar, unzip, wget |
 
