@@ -45,7 +45,7 @@
 
 | Repository                                          | Build Info                                                                                                                  | Include CLI Utilities                                                                        |
 | --------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| [SteamCMD](https://github.com/LacledesLAN/SteamCMD) | [![Build Status](https://travis-ci.org/LacledesLAN/SteamCMD.svg?branch=master)](https://travis-ci.org/LacledesLAN/SteamCMD) | bzip2, curl, [SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD), tar, unzip, wget |
+| [SteamCMD](https://github.com/LacledesLAN/SteamCMD) | [![Build Status](https://travis-ci.org/LacledesLAN/SteamCMD.svg?branch=master)](https://travis-ci.org/LacledesLAN/SteamCMD) | bzip2, curl, [SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD), tar, p7zip, unzip, wget |
 
 ## Dockerized Game Servers
 
