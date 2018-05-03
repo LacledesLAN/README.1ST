@@ -134,7 +134,7 @@ docker run -d --rm -p 80 -p 82:81 -p 8282:82/udp -p 192.168.1.100:8383:83 -p 192
 
 Containers can accept broadcast traffic by mapping to 0.0.0.0:\<port> but the first mapping will block subsequent containers.
 
-We use port publishing for tournament servers. Using [netplan](https://wiki.ubuntu.com/Netplan) we define multiple 1st-class IP addresses on the host and then map each container to the appropriate ports on an unused IP address. As there is no reason for tournament servers to be discoverable by the public we do not map to 0.0.0.0 for broadcast traffic.
+We use port publishing for tournament servers. Using [netplan](https://netplan.io/) we define multiple 1st-class IP addresses on the host and then map each container to the appropriate ports on an unused IP address. As there is no reason for tournament servers to be discoverable by the public we do not map to 0.0.0.0 for broadcast traffic.
 
 ### Connecting Containers Directly to your LAN
 
