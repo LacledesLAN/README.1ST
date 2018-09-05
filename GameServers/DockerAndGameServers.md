@@ -12,6 +12,8 @@ The concept is similar to bundling a game-server inside a virtual machine but of
 * **Portable** - Containers are instantiated from easily-transportable images; any Docker host with the appropriate image can start creating containers.
 * **Self-sufficient** - Containers don't need to be configured for resources (virtual hardware weights) or environment (network); they run like any other process on a host.
 
+> For those familiar with `virtual machines` you can think of a container as a way to virtualize an operating system.
+
 A driving notion behind the containerization movement is that applications should be *ephemeral* -- that a container is meant for a single purpose and should be stopped, destroyed, and replaced with minimal effort. This has guided our game server strategy:
 
 * We don't fix a running game server. If a server breaks we fix the image then spin up a replacement container.
