@@ -1,6 +1,6 @@
 # Network Bundles
 
-At our events we provide attendee network connections by using network bundles with individual 5' network cables plugged in. We prefer this to having attendees bring their own cables and/or plug directly into network as:
+At [Laclede's LAN](https://lacledeslan.com) events we provide attendee network connections by using network bundles with individual 5' network cables plugged in. We prefer this to having attendees bring their own cables and/or plug directly into network as:
 
 * Bundles are heaver than individual cables; pulling on the bundles doesn't put nearly as much stress on switch ports.
 * We don't have to worry about having to troubleshoot or work around the length of attendee-provided network cables.
