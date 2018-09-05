@@ -12,7 +12,7 @@ At [Laclede's LAN](https://lacledeslan.com) events we provide attendee network c
 | :------- | :-------- | :--------- | :------- |
 | TODO     | TODO      | ![LL Optimization Proof](../.images/networkbundles_femaleconnections.jpg "LL Optimization Proof") | TODO |
 
-* 4 of the lines are blue and 2 are white. For setups where there are 4 attendees per pair of tables the white lines can be left disconnected to save ports on network switches.
+Notice that four of the lines are blue while two are white. For setups with four attendees per table-pair the white lines can be left disconnected to reduce the ports used on the network switches.
 
 ## Length Chart
 
