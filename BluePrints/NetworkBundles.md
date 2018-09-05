@@ -16,7 +16,7 @@ At [Laclede's LAN](https://lacledeslan.com) events we provide attendee network c
 
 ## Length Chart
 
-These are the lengths we use for our network bundles at Laclede's LAN. Lengths have been chosen as they work with both 6' and 8' table setups (see also: [optimization proof](#LL-Optimization-Proof).
+These are the lengths we use for our network bundles at Laclede's LAN. Lengths have been chosen as they work with both 6' and 8' table setups (see also: [optimization proof](#LL-Optimization-Proof)).
 
 | Length | Raw Cat 5e |   | Length | Raw Cat 5e |
 | ------ | ---------- |---| ------ | ---------- |
@@ -51,7 +51,7 @@ For each bundle:
 4. Add a female RJ45 jack to each cable; using white for the marked cables and blue for all others.
 5. Add the faceplate and wrap electrical tape to the bundle where it'll be pinched by the clamp connector. Tighten the faceplate to the T-Box.
 6. Add the boots to the other end (white for marked cables; blue for all others).
-7. Attach male ends. Test and number both the faceplat and the boots.
+7. Attach male ends. Test and number both the faceplate and the boots (1 - 4 blue; 5 & 6 white).
 
 ## Additional & Addendums
 
