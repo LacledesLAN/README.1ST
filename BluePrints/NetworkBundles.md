@@ -46,10 +46,10 @@ For each bundle:
 ### The Process
 
 1. Punch the hole out of the T-BOX and screw in the NM clamp connector.
-2. Cut 6x cables to length; for two of the cables mark each end with a black sharpie (for "white" connections).
+2. Cut 6x cables to length; for two of the cables mark each end with a black sharpie (for the two "white" connections).
 3. Bind the six cables together using electrical tape leaving 8'' of slack on each end. Feed through the box.
-4. Add a female RJ45 jack to each cable; using white for the marked cables and blue for all others.
-5. Add the faceplate and wrap electrical tape to the bundle where it'll be pinched by the clamp connector. Tighten the faceplate to the T-Box.
+4. Add a female RJ45 jack to each cable you have threaded into the junction box; using white for the marked cables and blue for all others. 
+5. Add the faceplate and wrap electrical tape to the bundle where it'll be pinched by the clamp connector when the faceplate has been screwed on. Tighten the faceplate to the T-Box.
 6. Add the boots to the other end (white for marked cables; blue for all others).
 7. Attach male ends. Test and label both the faceplate and the boots (A - D blue; E & F white).
 
