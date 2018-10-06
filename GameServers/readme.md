@@ -55,7 +55,7 @@
 
 When feasible we ["dockerize"](https://hub.docker.com/u/lacledeslan) our game servers utilizing [Docker Cloud](https://cloud.docker.com/app/lacledeslan/repository/list) or [Travis CI](https://travis-ci.org/LacledesLAN) for automated builds and tests. We use [Snippet-Generator](https://github.com/LacledesLAN/Snippet-Generator) to generate the launch strings. For an overview of our best-practices and experiences using Docker at Laclede's LAN events see ["Using Docker for Game Servers"](DockerAndGameServers.md).
 
-### Our Standards
+### Our Conventions
 
 #### Docker Images
 
