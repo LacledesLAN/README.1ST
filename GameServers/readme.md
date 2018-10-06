@@ -78,5 +78,5 @@ We use a running instance of [API Reactor](https://github.com/dudleycodes/APIRea
 
 ### Notes on Source Dedicated Servers (SRCDS)
 
-* The Linux version of `SRCDS` prints directly to /dev/ttyN instead of stdout. This careless decision by Valve breaks piping and redirection. As such many of our SRCDS based docker images include the [`screen`](https://www.gnu.org/software/screen/manual/screen.html) utility for included automated tests.
+* The Linux version of `SRCDS` prints directly to /dev/ttyN instead of stdout. This unfortunate decision by Valve breaks piping and redirection. As such many of our SRCDS based docker images include the [`screen`](https://www.gnu.org/software/screen/manual/screen.html) utility for included automated tests.
 * We heavily rely on [Meta Mod](http://metamodsource.net/) and [Source Mod](http://www.sourcemod.net/) in all of our source servers to extend functionality. In addition to being familiar with the [SRCDS wiki](https://developer.valvesoftware.com/wiki/Source_Dedicated_Server) read over [Meta Mod / Source Mod Wiki](https://wiki.alliedmods.net/Main_Page) and the corresponding [community forums](https://forums.alliedmods.net/index.php).
