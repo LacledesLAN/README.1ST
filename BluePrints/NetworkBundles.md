@@ -1,5 +1,7 @@
 # Network Bundles
 
+*aka "Squids"*
+
 At [Laclede's LAN](https://lacledeslan.com) events we provide attendees network connections by using network bundles with individual 5' network cables plugged in. We prefer this to having attendees bring their own cables and/or plug directly into network since:
 
 * Bundles are heaver than individual cables; pulling on the bundles doesn't put nearly as much stress on switch ports.
@@ -8,9 +10,9 @@ At [Laclede's LAN](https://lacledeslan.com) events we provide attendees network 
 
 ## The Bundle
 
-| Overview | Faceplate | Female End | Male End |
-| :------- | :-------- | :--------- | :------- |
-| TODO     | TODO      | ![LL Optimization Proof](../.images/networkbundles_femaleconnections.jpg "LL Optimization Proof") | TODO |
+| Overview                                                       | Faceplate                                                         | Female End                                                                    | Male End                                                          |
+| :------------------------------------------------------------- | :---------------------------------------------------------------- | :---------------------------------------------------------------------------- | :---------------------------------------------------------------- |
+| ![Overview](../.images/networkbundles_overview.jpg "Overview") | ![Faceplate](../.images/networkbundles_faceplate.jpg "Faceplate") | ![Female Ends](../.images/networkbundles_femaleconnections.jpg "Female Ends") | ![Male Ends](../.images/networkbundles_male-ends.jpg "Male Ends") |
 
 Notice that four of the lines are blue while two are white. For setups with four attendees per table-pair, the white lines can be left disconnected to reduce the ports used on the network switches.
 
@@ -48,7 +50,7 @@ For each bundle:
 1. Punch the hole out of the T-BOX and screw in the NM clamp connector.
 2. Cut 6x cables to length; for two of the cables mark each end with a black sharpie (for the two "white" connections).
 3. Bind the six cables together using electrical tape leaving 8'' of slack on each end. Feed through the box.
-4. Add a female RJ45 jack to each cable you have threaded into the junction box; using white for the marked cables and blue for all others. 
+4. Add a female RJ45 jack to each cable you have threaded into the junction box; using white for the marked cables and blue for all others.
 5. Add the faceplate and wrap electrical tape to the bundle where it'll be pinched by the clamp connector when the faceplate has been screwed on. Tighten the faceplate to the T-Box.
 6. Add the boots to the other end (white for marked cables; blue for all others).
 7. Attach male ends. Test and label both the faceplate and the boots (A - D blue; E & F white).
