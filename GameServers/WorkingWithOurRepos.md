@@ -30,7 +30,7 @@ Our game-server repositories are optimized for editing with [Visual Studio Code]
 
 We *highly* recommend these plugins while working with our repositories in Visual Studio Code.
 
-* [Docker](https://marketplace.visualstudio.com/items?itemName=PeterJausovec.vscode-docker) - for syntax highlighting, hover tips, IntelliSense completion, and linting.
+* [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) - for syntax highlighting, hover tips, IntelliSense completion, and linting.
 * [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) - Used to maintain consistent coding style and encoding.
 
 ### Helpful Plugins
