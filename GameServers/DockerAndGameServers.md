@@ -90,7 +90,7 @@ If you use the cloud to build images, be prepared to build images locally in a d
 
 ## Networking Containerized Game Servers
 
-To be discoverable LAN servers respond to broadcast traffic from searching game clients with basic server info (name, map, player count, etc). In Linux the game server binds and listens to the appropriate port on 0.0.0.0 which is shared across the host's entire network stack. This model has long been a nuisance for admins as multiple servers cannot bind to the same port on 0.0.0.0. *(Windows-based servers listen to broadcast traffic differently and do not have this particular issue).*
+To be discoverable LAN servers respond to broadcast traffic from searching game clients with basic server info (name, map, player count, etc). In Linux the game server binds to the appropriate port on [*INADDR_ANY*](http://man7.org/linux/man-pages/man7/ip.7.html) (Docker displays 0.0.0.0), which is actually a bind across *all* local network interfaces. This networking model has long been a nuisance for admins as multiple servers cannot bind to the same port on *INADDR_ANY*. *(Windows-based servers listen to broadcast traffic differently and do not have this particular issue).*
 
 ![hl2dm LAN browser](https://raw.githubusercontent.com/LacledesLAN/README.1ST/master/.images/hl2dm-lan-browser.png)
 
