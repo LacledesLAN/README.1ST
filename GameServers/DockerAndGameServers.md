@@ -104,9 +104,11 @@ By default Docker containers are connected to the `bridge` network. This network
 
 > Further reading: [Docker container networking](https://docs.docker.com/engine/userguide/networking/)
 
-### Connecting Container to Host's Network Stack
+### Connecting Container to Host's Network Stack (Linux Only)
 
-Containers can be connected to the host's network stack via Docker's `host` network. This removes the container from all network isolation - all network interfaces defined on the host will be accessible. This is useful for developing and troubleshooting game server images but we don't recommend this method otherwise.
+On Linux machines containers can be connected to directly the host's network stack via Docker's `host` network. This removes the container from all network isolation - all network interfaces defined on the host will be accessible. This can be useful for troubleshooting game server images, particularly when a large range of ports are needed, but we do not recommend this method otherwise.
+
+> The host networking driver only works on Linux hosts, and is not supported on Docker Desktop (Mac or Windows) or Docker EE for Windows Server.
 
 Network behavior is identical to running the game server on the host OS. To run multiple game servers each will need to be configured to run on different interfaces and/or ports. The first server that binds to 0.0.0.0:\<port> will be discoverable by LAN browsers - subsequent servers will be hidden.
 
@@ -202,7 +204,7 @@ We haven't tried using IPVLAN at our events.
 
 ### Docker Networking
 
-* [PlrauSight Course: Docker Networking](https://app.pluralsight.com/library/courses/docker-networking) (paid video content)
+* [PluralSight Course: Docker Networking](https://app.pluralsight.com/library/courses/docker-networking) (paid video content)
 * [Bridge vs Macvlan](http://hicu.be/bridge-vs-macvlan) ([mirror](https://archive.fo/nqetB))
 * [Macvlan and IPvlan basics](https://sreeninet.wordpress.com/2016/05/29/macvlan-and-ipvlan/) ([mirror](https://archive.fo/0US6k))
 * [Docker network driver plugins](https://docs.docker.com/engine/extend/plugins_network/)
