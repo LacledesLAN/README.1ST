@@ -148,10 +148,13 @@ By using Docker's managed plugin system we can connect containers directly to th
 
 #### Using MACVLAN
 
-Using the MACVLAN driver is the recommended way to connect containers directly to your LAN. It does have a few pre-requisites:
+Using the MACVLAN driver is our recommended way of connecting containers directly to your LAN. It does have a few pre-requisites:
 
+* The `macvlan` networking driver only works on Linux hosts; it is not supported on Docker Desktop (Mac or Windows) or Docker EE for Windows Server.
 * [Promiscuous mode](https://en.wikipedia.org/wiki/Promiscuous_mode) must be enabled on the Docker host's network interface card(s).
 * The LAN must support multiple MAC addresses per physical port.
+
+> Most cloud providers block `macvlan` networking.
 
 Assuming our LAN is 192.168.0.0/21 we'll create a Docker network called "lan" on the host. We'll specify the valid range of container ip address using `ip-range` and the physical interface(s) to be used with `-o parent`.
 
