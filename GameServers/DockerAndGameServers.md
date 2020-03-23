@@ -90,7 +90,7 @@ If you use the cloud to build images, be prepared to build images locally in a d
 
 ## Networking Containerized Game Servers
 
-To be discoverable LAN servers respond to broadcast traffic from searching game clients with basic server info (name, map, player count, etc). In Linux the game server binds to the appropriate port on [*INADDR_ANY*](http://man7.org/linux/man-pages/man7/ip.7.html) (Docker displays 0.0.0.0), which is actually a bind across *all* local network interfaces. This networking model has long been a nuisance for admins as multiple servers cannot bind to the same port on *INADDR_ANY*. *(Windows-based servers listen to broadcast traffic differently and do not have this particular issue).*
+To be discoverable LAN servers respond to broadcast traffic from searching game clients with basic server info (name, map, player count, etc). In Linux the game server binds to the appropriate port on [*INADDR_ANY*](http://man7.org/linux/man-pages/man7/ip.7.html) (Docker displays 0.0.0.0), which is actually a bind across *all* network interfaces on the host. This networking model has long been a nuisance for admins as multiple servers cannot bind to the same port on *INADDR_ANY*. *(Windows-based servers listen to broadcast traffic differently and do not have this particular issue).*
 
 ![hl2dm LAN browser](https://raw.githubusercontent.com/LacledesLAN/README.1ST/master/.images/hl2dm-lan-browser.png)
 
@@ -147,7 +147,7 @@ By using Docker's managed plugin system we can connect containers directly to th
 
 > NOTICE: Connecting containers directly to a network goes against the grains of Docker community's "best practices"; asking for information frequently results in community scorn. Specifying *why* you're connecting containers directly to the LAN can help nip harsh responses in the bud.
 
-#### Using MACVLAN
+#### Using MACVLAN (Linux only)
 
 Using the MACVLAN driver is our recommended way of connecting containers directly to your LAN. It does have a few pre-requisites:
 
@@ -173,13 +173,13 @@ One side effect is that the host won't be able to see the container despite bein
 
 We use this method for game servers that should be findable on the LAN.
 
-#### Using IPVLAN
+#### Using IPVLAN (Linux only)
 
 The IPVLAN driver behaves similarly to MAVCLAN but should be used only in specific situations. In addition to having higher performance penalities all containers connected using IPVLAN will share the host's MAC address.
 
 Some facets of shared MAC addresses to consider are:
 
-* Auto-generated IPv6 address are based on MAC addresses; if using IPv6 and IPVLAN you must explicitly set IPv6 addresses otherwise all containers will get the same address.
+* When the host's IPv6 stack is configured for stateless autoconfig, with or with SLAAC, the container's IPv6 addresses must be explicitly set otherwise all containers will get the same address.
 * If the host uses DHCP to obtain network settings the DHCP server *must* be configured for ClientID; otherwise traffic will get dropped.
 
 Currently the general wisdom on the Docker community is to *only* use IPVLAN over MACVLAN if:
