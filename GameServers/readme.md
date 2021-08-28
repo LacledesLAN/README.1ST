@@ -4,7 +4,9 @@
 
 ## Game Server Catalog
 
-| Repository                                                                                                                 | Build Info                                                                                                                                                                                                                                   | Description                                    |
+When feasible we ["dockerize"](https://hub.docker.com/u/lacledeslan) our game servers and use [Snippet-Generator](https://github.com/LacledesLAN/Snippet-Generator) to generate the launch strings. For an overview of our best-practices and experiences using Docker at Laclede's LAN events see ["Using Docker for Game Servers"](DockerAndGameServers.md).
+
+| Repository                                                                                                                 | Build Status                                                                                                                                                                                                                                 | Description                                    |
 | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
 | [gamesvr-7daystodie](https://github.com/LacledesLAN/gamesvr-7daystodie)                                                    | [![Build Status](https://travis-ci.org/LacledesLAN/gamesvr-7daystodie.svg?branch=master)](https://travis-ci.org/LacledesLAN/gamesvr-7daystodie)                                                                                              | 7 Days to Die Server                           |
 | &nbsp;&nbsp;&nbsp;&nbsp;└─[─freeplay](https://github.com/LacledesLAN/gamesvr-7daystodie-freeplay)                          | [![Build Status](https://travis-ci.org/LacledesLAN/gamesvr-7daystodie-freeplay.svg?branch=master)](https://travis-ci.org/LacledesLAN/gamesvr-7daystodie-freeplay)                                                                            | LL 7 Days to Die Freeplay Server               |
@@ -39,31 +41,38 @@
 | &nbsp;&nbsp;&nbsp;&nbsp;└─[-challenge3](https://github.com/LacledesLAN/gamesvr-minecraft-challenge3)                       | ![Build Status](https://raw.githubusercontent.com/LacledesLAN/README.1ST/master/.images/build_local.png)                                                                                                                                     | LL Minecraft Challenge 3                       |
 | [gamesvr-quake2](https://github.com/LacledesLAN/gamesvr-quake2)                                                            | [![linux/amd64](https://github.com/LacledesLAN/gamesvr-quake2/actions/workflows/build-linux-image.yml/badge.svg?branch=master)](https://github.com/LacledesLAN/gamesvr-quake2/actions/workflows/build-linux-image.yml)                       | Quake 2 Server                                 |
 | [gamesvr-svencoop](https://github.com/LacledesLAN/gamesvr-svencoop)                                                        | [![linux/amd64](https://github.com/LacledesLAN/gamesvr-svencoop/actions/workflows/build-linux-image.yml/badge.svg?branch=master)](https://github.com/LacledesLAN/gamesvr-svencoop/actions/workflows/build-linux-image.yml)                   | Sven Co-op Server                              |
-| &nbsp;&nbsp;&nbsp;&nbsp;└─[─freeplay](https://github.com/LacledesLAN/gamesvr-svencoop-freeplay)                            | [![linux/amd64](https://github.com/LacledesLAN/gamesvr-svencoop-freeplay/actions/workflows/build-linux-image.yml/badge.svg?branch=master)](https://github.com/LacledesLAN/gamesvr-svencoop-freeplay/actions/workflows/build-linux-image.yml) | LL Sven Co-Op Freeplay Server                                         |                                                |
+| &nbsp;&nbsp;&nbsp;&nbsp;└─[─freeplay](https://github.com/LacledesLAN/gamesvr-svencoop-freeplay)                            | [![linux/amd64](https://github.com/LacledesLAN/gamesvr-svencoop-freeplay/actions/workflows/build-linux-image.yml/badge.svg?branch=master)](https://github.com/LacledesLAN/gamesvr-svencoop-freeplay/actions/workflows/build-linux-image.yml) | LL Sven Co-Op Freeplay Server                  |                                                |
 | [gamesvr-tf2](https://github.com/LacledesLAN/gamesvr-tf2)                                                                  | [![Docker Cloud Build](https://raw.githubusercontent.com/LacledesLAN/README.1ST/master/.images/build_dockercloud.png)](https://cloud.docker.com/u/lacledeslan/repository/docker/lacledeslan/gamesvr-tf2/)                                    | Team Fortress 2 Server                         |
 | &nbsp;&nbsp;&nbsp;&nbsp;├─[─blindfrag](https://github.com/LacledesLAN/gamesvr-tf2-blindfrag)                               | [![Docker Cloud Build](https://raw.githubusercontent.com/LacledesLAN/README.1ST/master/.images/build_dockercloud.png)](https://cloud.docker.com/u/lacledeslan/repository/docker/lacledeslan/gamesvr-tf2-blindfrag/)                          | LL Team Fortress 2 Blind-Frag Server           |
 | &nbsp;&nbsp;&nbsp;&nbsp;└─[─freeplay](https://github.com/LacledesLAN/gamesvr-tf2-freeplay)                                 | [![Docker Cloud Build](https://raw.githubusercontent.com/LacledesLAN/README.1ST/master/.images/build_dockercloud.png)](https://cloud.docker.com/u/lacledeslan/repository/docker/lacledeslan/gamesvr-tf2-freeplay/)                           | LL Team Fortress 2 Freeplay Server             |
 | [gamesvr-tf2classic](https://github.com/LacledesLAN/gamesvr-tf2classic)                                                    | ![Build Status](https://raw.githubusercontent.com/LacledesLAN/README.1ST/master/.images/build_local.png)                                                                                                                                     | Team Fortress 2 Classic Server                 |
 | &nbsp;&nbsp;&nbsp;&nbsp;└─[─freeplay](https://github.com/LacledesLAN/gamesvr-tf2classic-freeplay)                          | ![Build Status](https://raw.githubusercontent.com/LacledesLAN/README.1ST/master/.images/build_local.png)                                                                                                                                     | LL Team Fortress 2 Classic Freeplay Server     |
+| [gamesvr-ut99](https://github.com/LacledesLAN/gamesvr-ut99)                                                                |                                                                                                                                                                                                                                              | Unreal Tournament 1999 Dedicated Server        |
+| &nbsp;&nbsp;&nbsp;&nbsp;└─[─freeplay](https://github.com/LacledesLAN/gamesvr-ut99-freeplay)                                |                                                                                                                                                                                                                                              | LL Unreal Tournament 1999 Freeplay Server      |
 | [gamesvr-ut2004](https://github.com/LacledesLAN/gamesvr-ut2004)                                                            | [![linux/amd64](https://github.com/LacledesLAN/gamesvr-ut2004/actions/workflows/build-linux-image.yml/badge.svg?branch=master)](https://github.com/LacledesLAN/gamesvr-ut2004/actions/workflows/build-linux-image.yml)                       | Unreal Tournament 2004 Server                  |
 | &nbsp;&nbsp;&nbsp;&nbsp;└─[─freeplay](https://github.com/LacledesLAN/gamesvr-ut2004-freeplay)                              | [![linux/amd64](https://github.com/LacledesLAN/gamesvr-ut2004-freeplay/actions/workflows/build-linux-image.yml/badge.svg?branch=master)](https://github.com/LacledesLAN/gamesvr-ut2004-freeplay/actions/workflows/build-linux-image.yml)     | LL Unreal Tournament 2004 Freeplay Server      |
+| [gamesvr-valheim](https://github.com/LacledesLAN/gamesvr-valheim)                                                          |                                                                                                                                                                                                                                              | Valheim Dedicated Server                       |
+| &nbsp;&nbsp;&nbsp;&nbsp;└─[─freeplay](https://github.com/LacledesLAN/gamesvr-valheim-freeplay)                             |                                                                                                                                                                                                                                              | LL Valheim Freeplay Server                     |
 | [gamesvr-warsow](https://github.com/LacledesLAN/gamesvr-warsow)                                                            | ![linux/amd64](https://github.com/LacledesLAN/gamesvr-warsow/workflows/linux/amd64/badge.svg?branch=master)                                                                                                                                  | Warsow Dedicated Server in Docker              |
 | &nbsp;&nbsp;&nbsp;&nbsp;└─[─freeplay](https://github.com/LacledesLAN/gamesvr-warsow-freeplay)                              | ![linux/amd64](https://github.com/LacledesLAN/gamesvr-warsow-freeplay/workflows/linux/amd64/badge.svg?branch=master)                                                                                                                         | LL Warsow Freeplay Server                      |
 
-### Build Scripts, Docker Builder Images, and Helpers
+## Build Scripts, Docker Builder Images, and Helpers
 
 | Repository                                                      | Build Info                                                                                               | Details                                                                                                                                           |
 | --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [SteamCMD](https://github.com/LacledesLAN/SteamCMD)             | ![linux/amd64](https://github.com/LacledesLAN/SteamCMD/workflows/linux/amd64/badge.svg?branch=master)    | Docker builder image, includes: `bzip2`, `curl`, [SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD), `tar`, `p7zip`, `unzip`, `wget` |
 | [Local Builds Makefile](https://github.com/LacledesLAN/gamesvr) | ![Build Status](https://raw.githubusercontent.com/LacledesLAN/README.1ST/master/.images/build_local.png) | Makefile for building game servers; particularly those that can only be built locally.                                                            |
 
-## Dockerized Game Servers
+## Dependency Mirrors
 
-When feasible we ["dockerize"](https://hub.docker.com/u/lacledeslan) our game servers utilizing [Docker Cloud](https://cloud.docker.com/app/lacledeslan/repository/list) or [Travis CI](https://travis-ci.org/LacledesLAN) for automated builds and tests. We use [Snippet-Generator](https://github.com/LacledesLAN/Snippet-Generator) to generate the launch strings. For an overview of our best-practices and experiences using Docker at Laclede's LAN events see ["Using Docker for Game Servers"](DockerAndGameServers.md).
+| Repository                                                            | Details                                          | External Source                             |
+| --------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------- |
+| [amxmodx](https://github.com/LacledesLAN/amxmodx)                     | Server side plugin for "Gold SRC" engines        | [amxmodx.org](https://www.amxmodx.org/)     |
+| [sourcemod.linux](https://github.com/LacledesLAN/sourcemod.linux)     | Source Mod files needed for Linux environments   | [sourcemod.net](https://www.sourcemod.net/) |
+| [sourcemod.windows](https://github.com/LacledesLAN/sourcemod.windows) | Source Mod files needed for Windows environments | [sourcemod.net](https://www.sourcemod.net/) |
+| [sourcemod-configs](https://github.com/LacledesLAN/sourcemod-configs) | LL shared Source Mod configuration files         | n/a                                         |
 
-### Our Conventions
-
-#### Docker Images
+## Dockerized Game Servers Conventions
 
 * Image names for game servers start with `gamesvr`.
 * Derived images names are appended with `-description` where "description" describes function.
@@ -72,15 +81,11 @@ When feasible we ["dockerize"](https://hub.docker.com/u/lacledeslan) our game se
   * This prevents running image contents under `root`.
   * Derived images change the username to reflect the current image (e.g. user `CSGO` becomes `CSGOTourney`).
 
-#### Source Repos
+### Source Repos
 
 * Content meant for `/app/` (inside the image) are stored in `/dist/`.
   * Any Linux specific content is stored in `/dist.linux/`.
   * Any Windows specific content is stored in `/dist.windows/`.
-
-### Build Triggers
-
-We use a running instance of [API Reactor](https://github.com/dudleycodes/APIReactor) to monitor steam games for updates; when an update is detected (or 21 days w/o an update pass) it triggers build of ['watchers' on Docker Hub](https://hub.docker.com/u/llgameserverbot/). Corresponding [automated builds](https://hub.docker.com/u/lacledeslan/) have repository links connected which triggers builds.
 
 ### Notes on Source Dedicated Servers (SRCDS)
 
