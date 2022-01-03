@@ -58,10 +58,10 @@ When feasible we ["dockerize"](https://hub.docker.com/u/lacledeslan) our game se
 
 ## Build Scripts, Docker Builder Images, and Helpers
 
-| Repository                                                      | Build Info                                                                                               | Details                                                                                                                                           |
-| --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [SteamCMD](https://github.com/LacledesLAN/SteamCMD)             | ![linux/amd64](https://github.com/LacledesLAN/SteamCMD/workflows/linux/amd64/badge.svg?branch=master)    | Docker builder image, includes: `bzip2`, `curl`, [SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD), `tar`, `p7zip`, `unzip`, `wget` |
-| [Local Builds Makefile](https://github.com/LacledesLAN/gamesvr) | ![Build Status](https://raw.githubusercontent.com/LacledesLAN/README.1ST/master/.images/build_local.png) | Makefile for building game servers; particularly those that can only be built locally.                                                            |
+| Repository                                                      | Build Info                                                                                               | Details                                                                                                                                                     |
+| --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [SteamCMD](https://github.com/LacledesLAN/SteamCMD)             | ![linux/amd64](https://github.com/LacledesLAN/SteamCMD/workflows/linux/amd64/badge.svg?branch=master)    | Docker builder image, includes: `bzip2`, `curl`, [SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD), `tar`, `p7zip`, `unzip`, `wget`, `xz-utils` |
+| [Local Builds Makefile](https://github.com/LacledesLAN/gamesvr) | ![Build Status](https://raw.githubusercontent.com/LacledesLAN/README.1ST/master/.images/build_local.png) | Makefile for building game servers; particularly those that can only be built locally.                                                                      |
 
 ## Dependency Mirrors
 
