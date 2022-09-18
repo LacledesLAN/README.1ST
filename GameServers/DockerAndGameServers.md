@@ -71,14 +71,11 @@ Additionally, by keeping a [CLI](https://en.wikipedia.org/wiki/Command-line_inte
 ```shell
 docker exec -it containername bash
 ```
-Or you can override the running container default command for troubleshooting purposes:
+Or you can override the running container default command for troubleshooting purposes and interactive testing of internals:
 
 ```shell
 docker run -d --net=host lanparty/gamesvr-csgo bash
 ```
-
-as the default `ENTRYPOINT` a container can be spun up for interactive testing of internals.
-
 
 ### Pay Close Attention to File Ownership and Permissions
 
