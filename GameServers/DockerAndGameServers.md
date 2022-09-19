@@ -67,7 +67,15 @@ The above example is clean but adjusting `+maxplayers` would require modifying t
 docker run -d --net=host lacledeslan/gamesvr-csgo ./srcds_run -game csgo +game_type 0 +game_mode 1 +maxplayers 16 -tickrate 128 +map de_cache +sv_lan 1
 ```
 
-Additionally, by keeping a [CLI](https://en.wikipedia.org/wiki/Command-line_interface) (such as BASH) as the default `ENTRYPOINT` a container can be spun up for interactive testing of internals.
+Additionally, by keeping a [CLI](https://en.wikipedia.org/wiki/Command-line_interface) (such as BASH) within the image, you can exec into a running container, such as this example:
+```shell
+docker exec -it containername bash
+```
+Or you can override the running container default command for troubleshooting purposes and interactive testing of internals:
+
+```shell
+docker run -d --net=host lanparty/gamesvr-csgo bash
+```
 
 ### Pay Close Attention to File Ownership and Permissions
 
