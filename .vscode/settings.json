@@ -2,12 +2,26 @@
     "cSpell.words": [
         "amxmodx",
         "autoconfig",
+        "blackmesa",
+        "blindfrag",
         "csgo",
+        "cssource",
+        "cstrike",
+        "daystodie",
         "deathmatch",
         "docker",
         "dockerize",
         "dockerized",
+        "dods",
+        "factorio",
         "freeplay",
+        "gamesvr",
+        "garrysmod",
+        "gesource",
+        "goldsource",
+        "hldm",
+        "hldms",
+        "ioquake",
         "ipvlan",
         "laclede's",
         "macvlan",
@@ -17,8 +31,14 @@
         "repos",
         "sourcemod",
         "srcds",
+        "svencoop",
         "valheim",
         "warmod",
         "warsow"
-    ]
+    ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true
+    },
 }

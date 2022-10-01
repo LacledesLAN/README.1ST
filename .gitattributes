@@ -1,0 +1,19 @@
+* text=auto eol=lf encoding=utf-8
+
+*.*ignore           text
+*.json              text
+*.md                text diff=markdown
+.editorconfig       text
+.gitattributes      text
+
+*.bmp               binary
+*.gif               binary
+*.gifv              binary
+*.ico               binary
+*.jpeg              binary
+*.jpg               binary
+*.pdf               binary
+*.png               binary
+*.psd               binary
+*.tar               binary
+*.webp              binary
